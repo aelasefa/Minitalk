@@ -30,8 +30,8 @@ void	send_msg(char c, int pid)
 {
 	int	i;
 
-	i = 8;
-	while (i > 0)
+	i = 7;
+	while (i >= 0)
 	{
 		if ((c >> i) & 1)
 			kill(pid, SIGUSR1);
