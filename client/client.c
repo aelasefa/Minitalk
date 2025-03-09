@@ -44,10 +44,9 @@ void	send_msg(char c, int pid)
 
 int	main(int ac, char **av)
 {
-	
 	char	*msg;
 
-	int (pid), i;
+	int(pid), i;
 	parse_input(ac, av);
 	i = 0;
 	pid = ft_atoi(av[1]);

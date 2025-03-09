@@ -17,7 +17,6 @@ int	ft_isdigit(int c)
 	if (c >= 48 && c <= 57)
 		return (1);
 	return (0);
-
 }
 
 int	check_digit(char *str)
@@ -36,10 +35,10 @@ int	check_digit(char *str)
 
 int	ft_atoi(char *str)
 {
-	long			result;
-	long			last_result;
+	long	result;
+	long	last_result;
 
-	int (signe), i;
+	int(signe), i;
 	i = 0;
 	signe = 1;
 	result = 0;
