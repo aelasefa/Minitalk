@@ -6,7 +6,7 @@
 /*   By: ayelasef <ayelasef@1337.ma>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/10 00:41:57 by ayelasef          #+#    #+#             */
-/*   Updated: 2025/03/10 00:42:12 by ayelasef         ###   ########.fr       */
+/*   Updated: 2025/03/10 00:48:41 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	signal_handler(int sig, siginfo_t *info, void *context)
 	(void)info;
 	(void)context;
 	if (sig == SIGUSR2)
-		ft_printf("🚀the message has been received🚀\n");
+		ft_printf("🚀the message has been received✅\n");
 }
 
 void	send_msg(char c, int pid)
