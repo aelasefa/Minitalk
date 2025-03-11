@@ -31,7 +31,7 @@ void	signal_handler(int sig, siginfo_t *info, void *context)
 	(void)info;
 	(void)context;
 	if (sig == SIGUSR2)
-		ft_printf("🚀the message has been received✅\n");
+		ft_printf("🚀The message has been delivered.🛵\n");
 }
 
 void	send_msg(char c, int pid)
@@ -59,7 +59,6 @@ int	main(int ac, char **av)
 	parse_input(ac, av);
 	sa.sa_sigaction = signal_handler;
 	sa.sa_flags = SA_SIGINFO;
-	sigemptyset(&sa.sa_mask);
 	sigaction(SIGUSR2, &sa, NULL);
 	i = 0;
 	pid = ft_atoi(av[1]);
@@ -69,7 +68,6 @@ int	main(int ac, char **av)
 		send_msg(msg[i], pid);
 		i++;
 	}
-	send_msg('\n', pid);
 	send_msg('\0', pid);
 	exit(0);
 }

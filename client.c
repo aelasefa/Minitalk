@@ -56,7 +56,6 @@ int	main(int ac, char **av)
 		send_msg(msg[i], pid);
 		i++;
 	}
-	send_msg('\n', pid);
 	send_msg('\0', pid);
 	exit(0);
 }

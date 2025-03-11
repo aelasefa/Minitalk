@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sboukiou <sboukiou@1337.ma>                +#+  +:+       +#+        */
+/*   By: ayelasef <ayelasef@1337.ma>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/07 20:07:47 by sboukiou          #+#    #+#             */
-/*   Updated: 2025/03/10 00:15:00 by ayelasef         ###   ########.fr       */
+/*   Created: 2025/03/10 02:29:34 by ayelasef          #+#    #+#             */
+/*   Updated: 2025/03/10 02:29:39 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ int	main(int ac, char **av)
 	parse_input(ac, av);
 	sa.sa_sigaction = signal_handler;
 	sa.sa_flags = SA_SIGINFO;
-	sigemptyset(&sa.sa_mask);
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);
 	ft_printf("PID: %d\n", getpid());
